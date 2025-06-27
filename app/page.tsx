@@ -88,8 +88,6 @@ const Home = () => {
           </div>
         </div>
 
-        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-
         {/* Writings */}
         {/* <div className="mb-16">
           <h2 className="text-lg font-semibold mb-6">Writings</h2>

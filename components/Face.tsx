@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, X } from "lucide-react";
+import { Github, Linkedin, Mail, X } from "lucide-react";
 
 const Face = () => {
   const projects = [
