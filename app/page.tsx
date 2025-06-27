@@ -1,57 +1,45 @@
-import { Github, Linkedin, Mail, ExternalLink, X } from "lucide-react";
+"use client";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Home = () => {
   const projects = [
     {
-      title: "Trading Dashboard",
-      description:
-        "Real-time portfolio management with React and Python backend",
+      title: "Reposync",
+      description: "Github Saas Developer tool ",
       year: "2024",
-      link: "#",
+      link: "https://github.com/sahilr0x/reposync",
     },
     {
-      title: "Crypto Trading Bot",
-      description: "Automated trading strategies using machine learning",
+      title: "Metaverse space",
+      description: "Realtime multiplayer space",
       year: "2024",
-      link: "#",
+      link: "https://github.com/sahilr0x/metaverse-turbo",
     },
     {
-      title: "Portfolio Tracker",
-      description: "Investment tracking with advanced analytics",
-      year: "2023",
-      link: "#",
-    },
-    {
-      title: "DeFi Analytics Platform",
-      description: "Decentralized finance data visualization and analysis",
-      year: "2023",
-      link: "#",
-    },
-    {
-      title: "Market Sentiment Analyzer",
-      description: "AI-powered sentiment analysis for financial markets",
-      year: "2022",
-      link: "#",
+      title: "Opnify",
+      description: "Backend Logic for opinion trading",
+      year: "2024",
+      link: "https://github.com/sahilr0x/opnify-go",
     },
   ];
 
-  const writings = [
-    {
-      title: "Building Scalable Trading Systems",
-      year: "2024",
-      link: "#",
-    },
-    {
-      title: "The Future of DeFi",
-      year: "2024",
-      link: "#",
-    },
-    {
-      title: "Machine Learning in Finance",
-      year: "2023",
-      link: "#",
-    },
-  ];
+  // const writings = [
+  //   {
+  //     title: "Building Scalable Trading Systems",
+  //     year: "2024",
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "The Future of DeFi",
+  //     year: "2024",
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Machine Learning in Finance",
+  //     year: "2023",
+  //     link: "#",
+  //   },
+  // ];
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -67,8 +55,11 @@ const Home = () => {
                 <span>Finance Enthusiast</span>
               </div>
             </div>
-            <X className="w-6 h-6 text-gray-400 cursor-pointer hover:text-white transition-colors" />
           </div>
+          <p className="text-gray-400">
+            Working as a freelance developer on multiple SaaS applications used
+            by a variety of clients.
+          </p>
         </div>
 
         {/* Projects */}
@@ -97,8 +88,10 @@ const Home = () => {
           </div>
         </div>
 
+        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+
         {/* Writings */}
-        <div className="mb-16">
+        {/* <div className="mb-16">
           <h2 className="text-lg font-semibold mb-6">Writings</h2>
           <div className="space-y-4">
             {writings.map((writing, index) => (
@@ -115,26 +108,35 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Contact */}
         <div className="pt-8 border-t border-gray-800">
           <div className="flex gap-6">
             <a
-              href="#"
+              href="https://github.com/sahilr0x"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
+              title="GitHub"
             >
               <Github className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/sahil-revankar/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
+              title="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilrevankar20co21@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
+              title="Compose on Gmail"
             >
               <Mail className="w-5 h-5" />
             </a>
