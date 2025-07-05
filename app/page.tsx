@@ -2,6 +2,7 @@
 import { Github, Linkedin, Mail, X } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import GithubHeatmap from "@/components/GithubMap";
 
 const Home = () => {
   const projects = [
@@ -70,6 +71,9 @@ const Home = () => {
             Working as a freelance developer on multiple SaaS applications used
             by a variety of clients.
           </p>
+          <div className="mt-5">
+            <GithubHeatmap />
+          </div>
         </div>
 
         {/* Projects */}
