@@ -1,5 +1,7 @@
 "use client";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, X } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const projects = [
@@ -145,6 +147,16 @@ const Home = () => {
               title="Compose on Gmail"
             >
               <Mail className="w-5 h-5" />
+            </a>
+
+            <a
+              href="https://x.com/sahillrevankar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors"
+              title="Compose on X"
+            >
+              <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />
             </a>
           </div>
         </div>
