@@ -4,20 +4,28 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const Home = () => {
   const projects = [
     {
+      title: "Ghost.ai",
+      description:
+        "Ghost.ai is your one-stop solution for meeting automation! Whether it's Zoom, Google Meet, we've got you covered. Our bot joins, records, and transcribes meetings with style, all while giving you detailed summaries and seamless integration with your workflows. Say goodbye to meeting chaos and hello to streamlined productivity. 🚀",
+      year: "Jul-2025-Developing",
+      link: "https://github.com/sahilr0x/ghost.ai",
+    },
+    {
       title: "Reposync",
-      description: "Github Saas Developer tool ",
+      description:
+        "This application is designed to fetch the top 10 latest commits from a GitHub repository. After retrieving the commits, an AI model summarizes them to provide a concise overview. Additionally, the application allows users to search for where these commits are used, where they exist, and the reasons behind the changes. For this functionality, LangChain has been used to process and analyze the commit data effectively. ",
       year: "2024",
       link: "https://github.com/sahilr0x/reposync",
     },
     {
       title: "Metaverse space",
-      description: "Realtime multiplayer space",
+      description: "Realtime multiplayer space ",
       year: "2024",
       link: "https://github.com/sahilr0x/metaverse-turbo",
     },
     {
       title: "Opnify",
-      description: "Backend Logic for opinion trading",
+      description: "Backend Logic for opinion trading(like Probo)",
       year: "2024",
       link: "https://github.com/sahilr0x/opnify-go",
     },
