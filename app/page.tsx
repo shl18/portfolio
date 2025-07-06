@@ -1,10 +1,38 @@
 "use client";
-import { Github, Linkedin, Mail, X } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import GithubHeatmap from "@/components/GithubMap";
 
 const Home = () => {
+  const workExperience = [
+    {
+      title: "Full Stack Engineer",
+      company: "Dream Launch Studios",
+      type: "Freelance",
+      duration: "Jan 2025 - Present · 7 mos",
+      location: "India · Remote",
+      description:
+        "Freelance contractor to build MVPs from scratch (writelikehuman.ai and nyclisting.fyi) and more",
+    },
+    {
+      title: "Full Stack Engineer",
+      company: "100xDevs",
+      type: "Full-time",
+      duration: "Oct 2024 - Mar 2025 · 6 mos",
+      location: "Delhi, India · On-site",
+      description:
+        "Worked on scalable projects, making them scalable with Kubernetes and AWS",
+    },
+    {
+      title: "Software Engineer",
+      company: "Teknorix",
+      type: "Internship",
+      duration: "Oct 2022 - Dec 2022 · 3 mos",
+      location: "Verna, India · On-site",
+      description: "First internship, not learned anything",
+    },
+  ];
+
   const projects = [
     {
       title: "Ghost.ai",
@@ -28,7 +56,7 @@ const Home = () => {
     },
     {
       title: "Opnify",
-      description: "Backend Logic for opinion trading(like Probo)",
+      description: "Backend Engine for Opinion trading(like Probo)",
       year: "2024",
       link: "https://github.com/sahilr0x/opnify-go",
     },
@@ -71,8 +99,56 @@ const Home = () => {
             Working as a freelance developer on multiple SaaS applications used
             by a variety of clients.
           </p>
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <GithubHeatmap />
+          </div> */}
+        </div>
+
+        {/* Work Experience */}
+        <div className="mb-16">
+          <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
+          <div className="space-y-6">
+            {workExperience.map((job, index) => (
+              <div key={index} className="group">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <h3 className="text-lg font-medium">{job.title}</h3>
+                    <p className="text-gray-400 text-sm mt-1">
+                      {job.company} · {job.type}
+                    </p>
+                    <p className="text-gray-400 text-sm">{job.duration}</p>
+                    <p className="text-gray-400 text-sm">{job.location}</p>
+                    <p className="text-gray-400 text-sm mt-2">
+                      {job.company === "Dream Launch Studios" ? (
+                        <>
+                          Freelance contractor to build MVPs from scratch (
+                          <a
+                            href="https://www.writelikeahuman.ai/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:text-blue-300 underline"
+                          >
+                            writelikehuman.ai
+                          </a>{" "}
+                          and{" "}
+                          <a
+                            href="https://nyclistings.fyi/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 hover:text-blue-300 underline"
+                          >
+                            nyclisting.fyi
+                          </a>
+                          ) and more
+                        </>
+                      ) : (
+                        job.description
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
