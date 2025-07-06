@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
@@ -154,7 +154,9 @@ const Home = () => {
 
         {/* Projects */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-white">Projects</h2>
+          <h2 className="text-2xl font-bold mb-8 text-white">
+            Personal Projects
+          </h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <div key={index} className="group">
@@ -188,7 +190,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
             <div>
               <h3 className="text-xl font-semibold mb-2 text-white">
-                Let's connect
+                Let &apos; s connect
               </h3>
               <p className="text-gray-400">
                 Get in touch for collaborations and opportunities
