@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
@@ -9,7 +9,7 @@ const Home = () => {
       title: "Full Stack Engineer",
       company: "Dream Launch Studios",
       type: "Freelance",
-      duration: "Jan 2025 - Present · 7 mos",
+      duration: "Jan 2025 - July · 7 mos",
       location: "India · Remote",
       description:
         "Freelance contractor to build MVPs from scratch (writelikehuman.ai and nyclisting.fyi) and more",
@@ -62,90 +62,90 @@ const Home = () => {
     },
   ];
 
-  // const writings = [
-  //   {
-  //     title: "Building Scalable Trading Systems",
-  //     year: "2024",
-  //     link: "#",
-  //   },
-  //   {
-  //     title: "The Future of DeFi",
-  //     year: "2024",
-  //     link: "#",
-  //   },
-  //   {
-  //     title: "Machine Learning in Finance",
-  //     year: "2023",
-  //     link: "#",
-  //   },
-  // ];
-
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="max-w-2xl mx-auto px-6 py-16">
+      <div className="max-w-3xl mx-auto px-6 py-12 sm:py-16">
         {/* Header */}
         <div className="mb-16">
-          <div className="flex justify-between items-start mb-8">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6 mb-8">
             <div>
-              <h1 className="text-4xl font-bold mb-4">Sahil Revankar</h1>
-              <div className="flex gap-4 text-sm text-gray-400">
-                <span>Developer</span>
-
+              <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+                Sahil Revankar
+              </h1>
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-gray-400 mb-4">
+                <span className="flex items-center gap-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  Developer
+                </span>
+                <span className="hidden sm:inline text-gray-600">·</span>
                 <span>Finance Enthusiast</span>
               </div>
+              <p className="text-gray-400 text-lg max-w-2xl">
+                Working as a freelance developer on multiple SaaS applications
+                used by a variety of clients.
+              </p>
             </div>
+            <a
+              href="https://drive.google.com/file/d/1Z5CMU23TGpwXqtbHd03DK50q9-YEAt03/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+            >
+              <Download className="w-4 h-4" />
+              Resume
+            </a>
           </div>
-          <p className="text-gray-400">
-            Working as a freelance developer on multiple SaaS applications used
-            by a variety of clients.
-          </p>
-          {/* <div className="mt-5">
-            <GithubHeatmap />
-          </div> */}
         </div>
 
         {/* Work Experience */}
         <div className="mb-16">
-          <h2 className="text-lg font-semibold mb-6">Work Experience</h2>
-          <div className="space-y-6">
+          <h2 className="text-2xl font-bold mb-8 text-white">
+            Work Experience
+          </h2>
+          <div className="space-y-8">
             {workExperience.map((job, index) => (
-              <div key={index} className="group">
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium">{job.title}</h3>
-                    <p className="text-gray-400 text-sm mt-1">
-                      {job.company} · {job.type}
-                    </p>
-                    <p className="text-gray-400 text-sm">{job.duration}</p>
-                    <p className="text-gray-400 text-sm">{job.location}</p>
-                    <p className="text-gray-400 text-sm mt-2">
-                      {job.company === "Dream Launch Studios" ? (
-                        <>
-                          Freelance contractor to build MVPs from scratch (
-                          <a
-                            href="https://www.writelikeahuman.ai/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 hover:text-blue-300 underline"
-                          >
-                            writelikehuman.ai
-                          </a>{" "}
-                          and{" "}
-                          <a
-                            href="https://nyclistings.fyi/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-400 hover:text-blue-300 underline"
-                          >
-                            nyclisting.fyi
-                          </a>
-                          ) and more
-                        </>
-                      ) : (
-                        job.description
-                      )}
-                    </p>
+              <div key={index} className="border-l-2 border-gray-800 pl-6">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-xl font-semibold text-white">
+                      {job.title}
+                    </h3>
+                    <span className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">
+                      {job.type}
+                    </span>
                   </div>
+                  <div className="space-y-1">
+                    <p className="text-blue-400 font-medium">{job.company}</p>
+                    <p className="text-gray-400">{job.duration}</p>
+                    <p className="text-gray-500">{job.location}</p>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed">
+                    {job.company === "Dream Launch Studios" ? (
+                      <>
+                        Freelance contractor to build MVPs from scratch (
+                        <a
+                          href="https://www.writelikeahuman.ai/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:text-blue-300 underline"
+                        >
+                          writelikehuman.ai
+                        </a>{" "}
+                        and{" "}
+                        <a
+                          href="https://nyclistings.fyi/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-400 hover:text-blue-300 underline"
+                        >
+                          nyclisting.fyi
+                        </a>
+                        ) and more
+                      </>
+                    ) : (
+                      job.description
+                    )}
+                  </p>
                 </div>
               </div>
             ))}
@@ -154,90 +154,84 @@ const Home = () => {
 
         {/* Projects */}
         <div className="mb-16">
-          <div className="space-y-6">
+          <h2 className="text-2xl font-bold mb-8 text-white">Projects</h2>
+          <div className="space-y-8">
             {projects.map((project, index) => (
               <div key={index} className="group">
                 <a
                   href={project.link}
-                  className="flex justify-between items-start hover:text-gray-300 transition-colors"
+                  className="block p-6 border border-gray-800 rounded-lg hover:border-gray-700 hover:bg-gray-900/50 transition-all"
                 >
-                  <div className="flex-1">
-                    <h3 className="text-lg underline decoration-gray-600 group-hover:decoration-white transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mt-1">
-                      {project.description}
-                    </p>
+                  <div className="flex justify-between items-start gap-4">
+                    <div className="space-y-3 flex-1">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                          {project.title}
+                        </h3>
+                        <span className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">
+                          {project.year}
+                        </span>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </div>
                   </div>
-                  <span className="text-gray-500 text-sm ml-4">
-                    {project.year}
-                  </span>
                 </a>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Writings */}
-        {/* <div className="mb-16">
-          <h2 className="text-lg font-semibold mb-6">Writings</h2>
-          <div className="space-y-4">
-            {writings.map((writing, index) => (
-              <div key={index} className="group">
-                <a
-                  href={writing.link}
-                  className="flex justify-between items-center hover:text-gray-300 transition-colors"
-                >
-                  <h3 className="underline decoration-gray-600 group-hover:decoration-white transition-colors">
-                    {writing.title}
-                  </h3>
-                  <span className="text-gray-500 text-sm">{writing.year}</span>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
         {/* Contact */}
         <div className="pt-8 border-t border-gray-800">
-          <div className="flex gap-6">
-            <a
-              href="https://github.com/sahilr0x"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              title="GitHub"
-            >
-              <Github className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sahil-revankar/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              title="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilrevankar20co21@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              title="Compose on Gmail"
-            >
-              <Mail className="w-5 h-5" />
-            </a>
-
-            <a
-              href="https://x.com/sahillrevankar"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              title="Compose on X"
-            >
-              <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />
-            </a>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Let's connect
+              </h3>
+              <p className="text-gray-400">
+                Get in touch for collaborations and opportunities
+              </p>
+            </div>
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/sahilr0x"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors p-2"
+                title="GitHub"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sahil-revankar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors p-2"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilrevankar20co21@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors p-2"
+                title="Compose on Gmail"
+              >
+                <Mail className="w-6 h-6" />
+              </a>
+              <a
+                href="https://x.com/sahillrevankar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors p-2"
+                title="Compose on X"
+              >
+                <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
