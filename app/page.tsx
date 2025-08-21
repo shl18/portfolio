@@ -75,7 +75,6 @@ const Home = () => {
               width={256}
               height={256}
               priority
-              className="w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-md border border-neutral-200 object-cover mx-auto sm:mx-0"
             />
             <div className="flex-1">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-3">
