@@ -68,12 +68,14 @@ const Home = () => {
       <div className="max-w-4xl mx-auto px-6 py-12 sm:py-16">
         {/* Header */}
         <div className="mb-12">
-          <div className="flex items-start gap-6">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 text-center sm:text-left">
             <Image
               src="/Profiel.png"
               alt="Sahil Revankar"
               width={256}
               height={256}
+              priority
+              className="w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-md border border-neutral-200 object-cover mx-auto sm:mx-0"
             />
             <div className="flex-1">
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-3">
@@ -82,7 +84,7 @@ const Home = () => {
               <p className="text-neutral-600 mb-4">
                 Developer · Finance Enthusiast
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
                 <a
                   href="https://drive.google.com/file/d/1c3mKcEp8MxBjRoj_SbRE5FCtzAkZ-Olb/view?usp=sharing"
                   target="_blank"
@@ -133,7 +135,9 @@ const Home = () => {
 
         {/* Work Experience */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6">Work Experience</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center sm:text-left">
+            Work Experience
+          </h2>
           <div className="space-y-8">
             {workExperience.map((job, index) => (
               <div key={index} className="border-l-2 border-neutral-200 pl-6">
@@ -193,7 +197,9 @@ const Home = () => {
 
         {/* Projects */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6">Personal Projects</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-center sm:text-left">
+            Personal Projects
+          </h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <div key={index} className="group">
@@ -201,7 +207,7 @@ const Home = () => {
                   href={project.link}
                   className="block p-6 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors"
                 >
-                  <div className="flex justify-between items-start gap-4">
+                  <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center justify-between">
                         <h3 className="text-xl font-medium group-hover:text-blue-600 transition-colors">
@@ -224,14 +230,14 @@ const Home = () => {
 
         {/* Contact */}
         <div className="pt-8 border-t border-neutral-200">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6 text-center sm:text-left">
             <div>
               <h3 className="text-xl font-medium mb-2">Let &apos; s connect</h3>
               <p className="text-neutral-600">
                 Get in touch for collaborations and opportunities
               </p>
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center sm:justify-end">
               <a
                 href="https://github.com/sahilr0x"
                 target="_blank"
