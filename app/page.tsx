@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -63,63 +64,92 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-3xl mx-auto px-6 py-12 sm:py-16">
+    <div className="min-h-screen bg-stone-100 text-neutral-900">
+      <div className="max-w-4xl mx-auto px-6 py-12 sm:py-16">
         {/* Header */}
-        <div className="mb-16">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-6 mb-8">
-            <div>
-              <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+        <div className="mb-12">
+          <div className="flex items-start gap-6">
+            <Image
+              src="/Profiel.png"
+              alt="Sahil Revankar"
+              width={256}
+              height={256}
+            />
+            <div className="flex-1">
+              <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-3">
                 Sahil Revankar
               </h1>
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-gray-400 mb-4">
-                <span className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  Developer
-                </span>
-                <span className="hidden sm:inline text-gray-600">·</span>
-                <span>Finance Enthusiast</span>
-              </div>
-              <p className="text-gray-400 text-lg max-w-2xl">
-                Working as a freelance developer on multiple SaaS applications
-                used by a variety of clients.
+              <p className="text-neutral-600 mb-4">
+                Developer · Finance Enthusiast
               </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="https://drive.google.com/file/d/1c3mKcEp8MxBjRoj_SbRE5FCtzAkZ-Olb/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  <Download className="w-4 h-4" /> Resume
+                </a>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilrevankar20co21@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  <Mail className="w-4 h-4" /> Email
+                </a>
+                <a
+                  href="https://github.com/sahilr0x"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 text-neutral-600 hover:text-neutral-900"
+                  title="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://linkedin.com/in/sahilrevankar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 text-neutral-600 hover:text-neutral-900"
+                  title="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://x.com/sahillrevankar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 text-neutral-600 hover:text-neutral-900"
+                  title="X"
+                >
+                  <FontAwesomeIcon icon={faXTwitter} className="w-5 h-5" />
+                </a>
+              </div>
             </div>
-            <a
-              href="https://drive.google.com/file/d/1Z5CMU23TGpwXqtbHd03DK50q9-YEAt03/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-            >
-              <Download className="w-4 h-4" />
-              Resume
-            </a>
           </div>
         </div>
 
         {/* Work Experience */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-white">
-            Work Experience
-          </h2>
+          <h2 className="text-2xl font-semibold mb-6">Work Experience</h2>
           <div className="space-y-8">
             {workExperience.map((job, index) => (
-              <div key={index} className="border-l-2 border-gray-800 pl-6">
+              <div key={index} className="border-l-2 border-neutral-200 pl-6">
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <h3 className="text-xl font-semibold text-white">
-                      {job.title}
-                    </h3>
-                    <span className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">
+                    <h3 className="text-xl font-medium">{job.title}</h3>
+                    <span className="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full">
                       {job.type}
                     </span>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-blue-400 font-medium">{job.company}</p>
-                    <p className="text-gray-400">{job.duration}</p>
-                    <p className="text-gray-500">{job.location}</p>
+                    <p className="text-blue-600 font-medium">{job.company}</p>
+                    <p className="text-neutral-600">{job.duration}</p>
+                    <p className="text-neutral-500">{job.location}</p>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-neutral-700 leading-relaxed">
                     {job.company === "Dream Launch Studios" ? (
                       <>
                         Freelance contractor to build MVPs from scratch (
@@ -127,18 +157,27 @@ const Home = () => {
                           href="https://www.writelikeahuman.ai/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 underline"
+                          className="text-blue-600 hover:underline"
                         >
                           writelikehuman.ai
-                        </a>{" "}
-                        and{" "}
+                        </a>
+                        ,{" "}
                         <a
                           href="https://nyclistings.fyi/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-400 hover:text-blue-300 underline"
+                          className="text-blue-600 hover:underline"
                         >
                           nyclisting.fyi
+                        </a>
+                        ,{" "}
+                        <a
+                          href="https://contextflow.co/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          contextflow.co
                         </a>
                         ) and more
                       </>
@@ -154,27 +193,25 @@ const Home = () => {
 
         {/* Projects */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-white">
-            Personal Projects
-          </h2>
+          <h2 className="text-2xl font-semibold mb-6">Personal Projects</h2>
           <div className="space-y-8">
             {projects.map((project, index) => (
               <div key={index} className="group">
                 <a
                   href={project.link}
-                  className="block p-6 border border-gray-800 rounded-lg hover:border-gray-700 hover:bg-gray-900/50 transition-all"
+                  className="block p-6 border border-neutral-200 rounded-lg hover:bg-neutral-50 transition-colors"
                 >
                   <div className="flex justify-between items-start gap-4">
                     <div className="space-y-3 flex-1">
                       <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
+                        <h3 className="text-xl font-medium group-hover:text-blue-600 transition-colors">
                           {project.title}
                         </h3>
-                        <span className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full">
+                        <span className="px-3 py-1 bg-neutral-100 text-neutral-700 text-sm rounded-full">
                           {project.year}
                         </span>
                       </div>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-neutral-700 leading-relaxed">
                         {project.description}
                       </p>
                     </div>
@@ -186,13 +223,11 @@ const Home = () => {
         </div>
 
         {/* Contact */}
-        <div className="pt-8 border-t border-gray-800">
+        <div className="pt-8 border-t border-neutral-200">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Let &apos; s connect
-              </h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl font-medium mb-2">Let &apos; s connect</h3>
+              <p className="text-neutral-600">
                 Get in touch for collaborations and opportunities
               </p>
             </div>
@@ -201,16 +236,16 @@ const Home = () => {
                 href="https://github.com/sahilr0x"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors p-2"
+                className="text-neutral-600 hover:text-neutral-900 transition-colors p-2"
                 title="GitHub"
               >
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://www.linkedin.com/in/sahil-revankar/"
+                href="https://linkedin.com/in/sahilrevankar/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors p-2"
+                className="text-neutral-600 hover:text-neutral-900 transition-colors p-2"
                 title="LinkedIn"
               >
                 <Linkedin className="w-6 h-6" />
@@ -219,7 +254,7 @@ const Home = () => {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=sahilrevankar20co21@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors p-2"
+                className="text-neutral-600 hover:text-neutral-900 transition-colors p-2"
                 title="Compose on Gmail"
               >
                 <Mail className="w-6 h-6" />
@@ -228,7 +263,7 @@ const Home = () => {
                 href="https://x.com/sahillrevankar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors p-2"
+                className="text-neutral-600 hover:text-neutral-900 transition-colors p-2"
                 title="Compose on X"
               >
                 <FontAwesomeIcon icon={faXTwitter} className="w-6 h-6" />
