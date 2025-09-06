@@ -8,6 +8,15 @@ const Home = () => {
   const workExperience = [
     {
       title: "Full Stack Engineer",
+      company: "DripFLow",
+      type: "Contract",
+      duration: "Jul 2025 - Sep 2025",
+      location: "USA · Remote",
+      description:
+        "Contractor to revamp the whole platform and and add new bundle of advanced ui features,stripe integration,multimodel integration for newletter generation",
+    },
+    {
+      title: "Full Stack Engineer",
       company: "Dream Launch Studios",
       type: "Freelance",
       duration: "Jan 2025 - July · 7 mos",
