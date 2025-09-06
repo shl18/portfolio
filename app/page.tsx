@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Notebook } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
@@ -108,6 +108,14 @@ const Home = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-300 hover:bg-neutral-50 transition-colors"
                 >
                   <Mail className="w-4 h-4" /> Email
+                </a>
+                <a
+                  href="https://mighty-run-1d5.notion.site/Self-Notes-2666d33a281c81bc8c64d65d81e855ce?pvs=73"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-neutral-300 hover:bg-neutral-50 transition-colors"
+                >
+                  <Notebook className="w-4 h-4" /> Self Notes
                 </a>
                 <a
                   href="https://github.com/sahilr0x"
