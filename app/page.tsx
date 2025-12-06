@@ -6,6 +6,15 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const workExperience = [
+      {
+      title: "Software Engineer",
+      company: "Sherlocks.ai",
+      type: "Contract",
+      duration: "Aug 2025 - Nov 2025",
+      location: "Remote",
+      description:
+        "Contractor to revamp the whole platform and and add new bundle of advanced ui features,stripe integration,multimodel integration for newletter generation",
+    },
     {
       title: "Full Stack Engineer",
       company: "DripFLow",
