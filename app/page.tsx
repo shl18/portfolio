@@ -6,14 +6,32 @@ import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const workExperience = [
-      {
+    {
+      title: "AI Full Stack Engineer",
+      company: "CDM base",
+      type: "Present",
+      duration: "Nov 2025 - Present",
+      location: "Atlanta, Georgia · Remote",
+      description:
+        "Currenlty in Stealth mode",
+    },
+    {
       title: "Software Engineer",
       company: "Sherlocks.ai",
+      type: "Full-time",
+      duration: "Aug 2025 - Nov 2025",
+      location: "Gurgaon, India · Onsite",
+      description:
+        "AI-driven SRE automation platform that transforms incident management. It leverages autonomous AI agents to handle alerts, perform real-time root cause analysis, prevent outages, and accelerate system recovery — reducing false alarms and manual incident resolution time.",
+    },
+    {
+      title: "Full Stack Engineer",
+      company: "Storysense.ai",
       type: "Contract",
       duration: "Aug 2025 - Nov 2025",
-      location: "Remote",
+      location: "USA · Remote",
       description:
-        "Contractor to revamp the whole platform and and add new bundle of advanced ui features,stripe integration,multimodel integration for newletter generation",
+        "Integrated AI copilot system that helps creators build and manage their stories — from ideation to final editing. It leverages AI to automate repetitive tasks, enhance creative decision-making, and accelerate the editing process, allowing storytellers to focus on creativity and quality.",
     },
     {
       title: "Full Stack Engineer",
@@ -48,7 +66,7 @@ const Home = () => {
       type: "Internship",
       duration: "Oct 2022 - Dec 2022 · 3 mos",
       location: "Verna, India · On-site",
-      description: "First internship, not learned anything",
+      description: "First internship, learned a lot",
     },
   ];
 
