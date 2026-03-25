@@ -8,7 +8,7 @@ const Home = () => {
   const workExperience = [
     {
       title: "AI Full Stack Engineer",
-      company: "CDM base",
+      company: "Stealth",
       type: "Present",
       duration: "Nov 2025 - Present",
       location: "Atlanta, Georgia · Remote",
